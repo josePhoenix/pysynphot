@@ -10,8 +10,8 @@ Introduction
 Astrolib PySynphot (hereafter referred to only as **pysynphot**) is an
 object-oriented replacement for STSDAS SYNPHOT synthetic photometry package in
 IRAF. It is distributed as part of
-`stsci_python <http://www.stsci.edu/institute/software_hardware/pyraf/stsci_python/>`_,
-`Ureka <http://ssb.stsci.edu/ureka/>`_, and also as
+`AstroConda <http://astroconda.readthedocs.io/en/latest/>`_ (preferred),
+`stsci_python <http://www.stsci.edu/institute/software_hardware/pyraf/stsci_python/>`_, and also as
 `standalone <https://github.com/spacetelescope/pysynphot/releases>`_
 (`its PyPI distribution <https://pypi.python.org/pypi/pysynphot/>`_ is no
 longer supported).
@@ -42,7 +42,7 @@ multiple observing modes.
 
 If you use **pysynphot** in your work, please cite it as,
 "*Lim, P. L., Diaz, R. I., & Laidler, V. 2015, PySynphot User's Guide
-(Baltimore, MD: STScI), http://ssb.stsci.edu/pysynphot/docs/*"
+(Baltimore, MD: STScI), https://pysynphot.readthedocs.io/en/latest/*"
 
 If you have questions or concerns regarding the software, please contact
 STScI Help Desk via ``help[at]stsci.edu``.
@@ -62,9 +62,9 @@ Unless you are using Ureka, the following dependencies must be installed first:
 To install the
 `standalone <https://github.com/spacetelescope/pysynphot/releases>`_ release::
 
-    pip install https://github.com/spacetelescope/pysynphot/archive/0.9.8.2.zip
+    pip install git+https://github.com/spacetelescope/pysynphot.git@0.9.8.5
 
-**pysynphot** is not fully tested under Python 3. Please use Python 2.7.
+**pysynphot** is not fully tested under Python 3, but it should work.
 
 Data files for **pysynphot** are distributed separately by
 `Calibration Reference Data System <http://www.stsci.edu/hst/observatory/crds/throughput.html>`_.
@@ -122,19 +122,21 @@ These data files [#f1]_ are needed for calculations involving source spectra:
 +------------------------------------------+----------------------------+-------------------------------------------------+
 | Description                              | Directory name             | Download                                        |
 +==========================================+============================+=================================================+
-|AGN templates                             |$PYSYN_CDBS/grid/agn/       |ftp://ftp.stsci.edu/cdbs/tarfiles/synphot2.tar.gz|
+|Interstellar extinction curves            |$PYSYN_CDBS/extinction/     |ftp://ftp.stsci.edu/cdbs/tarfiles/synphot2.tar.gz|
 +------------------------------------------+----------------------------+                                                 |
-|Bruzual stellar atlas                     |$PYSYN_CDBS/grid/bz77/      |                                                 |
+|AGN templates                             |$PYSYN_CDBS/grid/agn/       |                                                 |
 +------------------------------------------+----------------------------+                                                 |
 |Bruzual-Charlot galaxy spectra            |$PYSYN_CDBS/grid/bc95/      |                                                 |
 +------------------------------------------+----------------------------+                                                 |
+|Buser-Kurucz stellar atlas                |$PYSYN_CDBS/grid/bkmodels/  |                                                 |
++------------------------------------------+----------------------------+                                                 |
 |Bruzual-Persson-Gunn-Stryker stellar atlas|$PYSYN_CDBS/grid/bpgs/      |                                                 |
 +------------------------------------------+----------------------------+                                                 |
-|Buser-Kurucz stellar atlas                |$PYSYN_CDBS/grid/bkmodels/  |                                                 |
+|Bruzual stellar atlas                     |$PYSYN_CDBS/grid/bz77/      |                                                 |
 +------------------------------------------+----------------------------+                                                 |
 |Galactic emission line objects            |$PYSYN_CDBS/grid/galactic/  |                                                 |
 +------------------------------------------+----------------------------+                                                 |
-|Interstellar extinction curves            |$PYSYN_CDBS/extinction/     |                                                 |
+|Gunn-Stryker atlas                        |$PYSYN_CDBS/grid/gunnstryker|                                                 |
 +------------------------------------------+----------------------------+                                                 |
 |Jacobi-Hunter-Christian stellar atlas     |$PYSYN_CDBS/grid/jacobi/    |                                                 |
 +------------------------------------------+----------------------------+                                                 |
